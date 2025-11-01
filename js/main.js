@@ -2,7 +2,6 @@
 // 1. UTILIDADES E VARIÁVEIS GLOBAIS
 // =======================================
 
-// Map de URLs para simular Templates (necessário para o SPA)
 const ROUTES = {
     '/': 'index.html',
     '/index.html': 'index.html',
@@ -35,20 +34,24 @@ function showTemporaryMessage(message, success = true) {
 // 2. FUNÇÕES DE SPA BÁSICO E ROTAS
 // =======================================
 
+// --- NOVO: Lógica do Modo Escuro (WCAG AA) ---
 function setupDarkModeToggle() {
     const toggleButton = document.getElementById('dark-mode-toggle');
+    
+    // Carrega a preferência ao iniciar
+    if (localStorage.getItem('dark-mode-preference') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+    
     if (!toggleButton) return;
 
     toggleButton.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         const isDarkMode = document.body.classList.contains('dark-mode');
         
+        // Salva a preferência no localStorage (WCAG persistente)
         localStorage.setItem('dark-mode-preference', isDarkMode ? 'dark' : 'light');
     });
-
-    if (localStorage.getItem('dark-mode-preference') === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
 }
 
 async function navigate(url) {
