@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Conecta Bem - Transformando Vidas</title>
+    <meta name="description" content="Plataforma de voluntariado e doações para a ONG Conecta Bem. Junte-se a nós para fazer a diferença.">
+    
+    <link rel="stylesheet" href="css/main.css">
+
+    </head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="header-main" role="banner">
+        <nav class="container header-nav" role="navigation">
+            <a href="index.html" class="header-logo">
+                <img src="assets/image/logo.png" alt="Logo ONG Conecta Bem">
+            </a>
+
+            <button id="dark-mode-toggle" aria-label="Alternar Modo Escuro" class="mobile-button" style="margin-left: auto; margin-right: 16px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+
+            <div class="desktop-menu">
+                <a href="index.html" class="active">Início</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="comunidade.html">Comunidade</a>
+                <a href="gestao.html">Colaborador</a>
+                <a href="cadastro.html">Participe</a>
+                <a href="cadastro.html" class="btn btn-primary btn-pill">Seja Voluntário</a>
+            </div>
+
+            <button id="mobile-menu-button" class="mobile-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden container">
+            <a href="index.html" class="active">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="comunidade.html">Comunidade</a>
+            <a href="gestao.html">Colaborador</a>
+            <a href="cadastro.html">Participe</a>
+            <a href="cadastro.html" class="btn btn-primary btn-pill">Seja Voluntário</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-2xl text-center" style="background-color: var(--color-hero-background);">
+            <div class="container">
+                <h1 class="font-bold mb-4" style="color: var(--color-neutral-darkest); font-size: 2.5rem;">Conectando Corações, Transformando Vidas</h1>
+                
+                <p class="text-lg mx-auto mb-8" style="max-width: 50rem; color: var(--color-neutral-darkest);">
+                    Nossa missão é criar pontes entre quem quer ajudar e quem precisa de ajuda, promovendo o desenvolvimento social em nossas comunidades.
+                </p>
+                
+                <a href="projetos.html" class="btn btn-pill" style="background-color: var(--color-white); color: var(--color-primary-base); padding: 0.75rem 2rem;">
+                    Conheça Nossos Projetos
+                </a>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-xl">
+            <div class="container">
+                <h2 class="text-center">Quem Somos</h2>
+                <div class="two-column-layout-lg">
+                    <div>
+                        <img src="https://placehold.co/600x400/38a169/ffffff?text=Nossa+Equipe" alt="Equipe da ONG Conecta Bem reunida e sorrindo" class="rounded-lg shadow-xl" style="width: 100%;">
+                    </div>
+                    <div>
+                        <h3>Nossa Missão, Visão e Valores</h3>
+                        <p>
+                            <strong>Missão:</strong> Promover a inclusão social e o desenvolvimento comunitário através de projetos de educação, cultura e esporte, conectando voluntários e doadores a causas que geram impacto real e duradouro.
+                        </p>
+                        <p>
+                            <strong>Visão:</strong> Ser uma organização de referência, reconhecida pela transparência, eficiência e pelo poder de transformação social que inspira a solidariedade em toda a sociedade.
+                        </p>
+                        <p>
+                            <strong>Valores:</strong> Comprometimento, Transparência, Empatia, Inovação Social e Respeito à Diversidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-xl" style="background-color: #f3f4f6;">
+            <div class="container">
+                <h2 class="text-3xl font-bold text-center mb-10">Entre em Contato</h2>
+                <div class="p-md rounded-lg shadow-md mx-auto" style="max-width: 700px; background-color: var(--color-white);">
+                    <div class="grid-2-col-md grid-layout">
+                        <div class="text-center">
+                            <h3 class="font-semibold mb-lg">Endereço</h3>
+                            <p>Rua da Esperança, 123<br>Centro, Cidade Feliz - SP<br>CEP: 12345-678</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="font-semibold mb-lg">Informações de Contato</h3>
+                            <p><strong>Email:</strong> contato@conectabem.org</p>
+                            <p><strong>Telefone:</strong> (11) 98765-4321</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-main" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 ONG Conecta Bem. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido para transformar o mundo.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

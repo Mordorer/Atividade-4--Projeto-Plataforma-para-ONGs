@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade e Transparência - ONG Conecta Bem</title>
+    <meta name="description" content="Blog, notícias, newsletter, área de imprensa e documentos públicos da ONG Conecta Bem.">
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="notification" class="hidden">
+        <p id="notification-message"></p>
+    </div>
+
+    <header class="header-main">
+        <nav class="container header-nav">
+            <a href="index.html" class="header-logo">
+                <img src="assets/image/logo.png" alt="Logo ONG Conecta Bem">
+            </a>
+
+            <button id="dark-mode-toggle" aria-label="Alternar Modo Escuro" class="mobile-button" style="margin-left: auto; margin-right: 16px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+
+            <div class="desktop-menu">
+                <a href="index.html">Início</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="comunidade.html" class="active">Comunidade</a>
+                <a href="gestao.html">Colaborador</a>
+                <a href="cadastro.html">Participe</a>
+                <a href="cadastro.html" class="btn btn-primary">Seja Voluntário</a>
+            </div>
+
+            <button id="mobile-menu-button" class="mobile-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden container">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="comunidade.html" class="active">Comunidade</a>
+            <a href="gestao.html">Colaborador</a>
+            <a href="cadastro.html">Participe</a>
+            <a href="cadastro.html" class="btn btn-primary">Seja Voluntário</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-lg" style="background-color: #f3f4f6;">
+            <div class="container text-center">
+                <h1>Nossa Comunidade</h1>
+                <p class="text-lg" style="color: var(--color-neutral-dark);">Notícias, atualizações e transparência sobre nosso trabalho.</p>
+            </div>
+        </section>
+
+        <section id="blog" class="py-xl">
+            <div class="container">
+                <h2 class="text-center mb-lg">Blog e Atualizações</h2>
+                <div class="grid-layout grid-2-col-md grid-3-col-lg">
+                    <article class="card">
+                        <img src="https://placehold.co/600x400/38a169/ffffff?text=Inauguração" alt="Inauguração de novo projeto" class="card-image">
+                        <div class="card-content">
+                            <span class="text-sm" style="color: var(--color-neutral-medium);">20 de Outubro, 2025</span>
+                            <h3>Inauguramos o novo centro de capacitação</h3>
+                            <p style="color: var(--color-neutral-dark);">Veja como foi o evento de inauguração do nosso mais novo projeto de educação digital na comunidade...</p>
+                            <a href="noticia-1.html">Leia Mais &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://placehold.co/600x400/f6ad55/ffffff?text=Voluntariado" alt="Voluntários em ação" class="card-image">
+                        <div class="card-content">
+                            <span class="text-sm" style="color: var(--color-neutral-medium);">15 de Outubro, 2025</span>
+                            <h3>O impacto do voluntariado: Histórias reais</h3>
+                            <p style="color: var(--color-neutral-dark);">Conheça a história da Maria, voluntária que está transformando vidas através da oficina de artes...</p>
+                            <a href="noticia-2.html">Leia Mais &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://placehold.co/600x400/63b3ed/ffffff?text=Resultados" alt="Gráfico de resultados" class="card-image">
+                        <div class="card-content">
+                            <span class="text-sm" style="color: var(--color-neutral-medium);">10 de Outubro, 2025</span>
+                            <h3>Relatório do Semestre: +500 vidas impactadas</h3>
+                            <p style="color: var(--color-neutral-dark);">Apresentamos os resultados dos nossos projetos nos últimos 6 meses. Agradecemos a todos os doadores...</p>
+                            <a href="noticia-3.html">Leia Mais &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="py-xl text-white text-center" style="background-color: var(--color-primary-base);">
+            <div class="container" style="max-width: 50rem;">
+                <h2 class="font-bold mb-md" style="color: var(--color-white);">Assine nossa Newsletter</h2>
+                <p class="text-lg mb-lg" style="color: #e0f2f1;">Fique por dentro de todas as novidades, eventos e saiba como sua ajuda está fazendo a diferença.</p>
+                <form id="newsletterForm" class="flex-group" style="flex-direction: column; max-width: 400px; margin: 0 auto; gap: var(--space-sm);">
+                    <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" class="form-input" required style="width: 100%; border-radius: 9999px;">
+                    <button type="submit" class="btn btn-secondary" style="width: 100%; padding: var(--space-xs) var(--space-xl); border-radius: 9999px;">
+                        Inscrever
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="imprensa-documentos" class="py-xl">
+            <div class="container">
+                <div class="grid-layout grid-2-col-md" style="gap: var(--space-2xl);">
+                    
+                    <div>
+                        <h2 class="text-center mb-lg">Área de Imprensa</h2>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+                            <a href="imprensa-1.html" class="document-link" style="background-color: var(--color-white); padding: var(--space-md); border-radius: var(--space-xs); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <span class="text-sm" style="color: var(--color-neutral-medium);">20 de Outubro, 2025</span>
+                                <h3 class="font-semibold" style="color: var(--color-primary-dark); margin-top: 4px;">ONG Conecta Bem inaugura centro de capacitação para 200 jovens</h3>
+                            </a>
+                            <a href="imprensa-2.html" class="document-link" style="background-color: var(--color-white); padding: var(--space-md); border-radius: var(--space-xs); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <span class="text-sm" style="color: var(--color-neutral-medium);">05 de Outubro, 2025</span>
+                                <h3 class="font-semibold" style="color: var(--color-primary-dark); margin-top: 4px;">Campanha de arrecadação de inverno bate meta e ajuda 100 famílias</h3>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-center mb-lg">Documentos Públicos</h2>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+                            <a href="docs/relatorio-2024.pdf" class="document-link flex-between">
+                                <span class="font-semibold" style="color: var(--color-primary-dark);">Relatório de Atividades 2024</span>
+                                <span class="badge badge-meio-ambiente">Baixar</span>
+                            </a>
+                            <a href="docs/balanco-2024.pdf" class="document-link flex-between">
+                                <span class="font-semibold" style="color: var(--color-primary-dark);">Balanço Financeiro 2024</span>
+                                <span class="badge badge-meio-ambiente">Baixar</span>
+                            </a>
+                            <a href="docs/estatuto.pdf" class="document-link flex-between">
+                                <span class="font-semibold" style="color: var(--color-primary-dark);">Estatuto Social da ONG Conecta Bem</span>
+                                <span class="badge badge-meio-ambiente">Baixar</span>
+                            </a>
+                            <a href="docs/certificado.pdf" class="document-link flex-between">
+                                <span class="font-semibold" style="color: var(--color-primary-dark);">Certificado de Utilidade Pública</span>
+                                <span class="badge badge-meio-ambiente">Baixar</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-main">
+        <div class="container">
+            <p>&copy; 2025 ONG Conecta Bem. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido para transformar o mundo.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

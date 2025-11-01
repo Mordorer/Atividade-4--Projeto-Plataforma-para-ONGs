@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Colaborador - ONG Conecta Bem</title>
+    <meta name="description" content="Acesso restrito para gestão de projetos e indicadores da ONG Conecta Bem.">
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header class="header-main">
+        <nav class="container header-nav">
+            <a href="index.html" class="header-logo">
+                <img src="assets/image/logo.png" alt="Logo ONG Conecta Bem">
+            </a>
+
+            <button id="dark-mode-toggle" aria-label="Alternar Modo Escuro" class="mobile-button" style="margin-left: auto; margin-right: 16px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+
+            <div class="desktop-menu">
+                <a href="index.html">Início</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="comunidade.html">Comunidade</a>
+                <a href="gestao.html" class="active">Colaborador</a>
+                <a href="cadastro.html">Participe</a>
+                <a href="cadastro.html" class="btn btn-primary btn-pill">Seja Voluntário</a>
+            </div>
+
+            <button id="mobile-menu-button" class="mobile-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden container">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="comunidade.html">Comunidade</a>
+            <a href="gestao.html" class="active">Colaborador</a>
+            <a href="cadastro.html">Participe</a>
+            <a href="cadastro.html" class="btn btn-primary btn-pill">Seja Voluntário</a>
+        </div>
+    </header>
+
+    <main class="py-xl">
+        <div class="container">
+
+            <div id="login-screen" class="p-lg rounded-lg shadow-xl mx-auto" style="max-width: 480px; background-color: var(--color-white);">
+                
+                <h1 class="font-bold text-center" style="font-size: var(--font-size-3xl); margin-bottom: var(--space-xs);">Acesso do Colaborador</h1>
+                
+                <p class="text-center" style="color: var(--color-neutral-dark); margin-bottom: var(--space-xl);">Faça login para gerenciar os projetos.</p>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username" class="form-label">Usuário</label>
+                        <input type="text" id="username" name="username" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group password-field">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" id="password" name="password" class="form-input" required>
+                        <button type="button" id="togglePassword" class="password-toggle-btn">
+                            <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                            <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
+                        </button>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: var(--space-xs) var(--space-lg);">Entrar</button>
+                </form>
+            </div>
+
+            <div id="dashboard-content" class="hidden">
+                <h1 class="font-bold mb-lg">Painel de Gestão de Projetos</h1>
+
+                <div class="grid-layout dashboard-layout-lg" style="gap: var(--space-lg);">
+                    
+                    <div class="lg-col-4 space-y-6">
+                        <div class="p-md rounded-lg shadow-xl" style="background-color: var(--color-white);">
+                            <h2 id="form-title" class="font-bold mb-md">Cadastrar Novo Projeto</h2>
+                            <form id="projectForm" style="display: flex; flex-direction: column; gap: var(--space-sm);">
+                                <input type="hidden" id="projectImageUrl" name="projectImageUrl">
+                                
+                                <div class="form-group">
+                                    <label for="projectName" class="form-label">Nome do Projeto</label>
+                                    <input type="text" id="projectName" name="projectName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectCategory" class="form-label">Categoria</label>
+                                    <select id="projectCategory" name="projectCategory" class="form-select" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="educacao">Educação</option>
+                                        <option value="saude">Saúde</option>
+                                        <option value="meio-ambiente">Meio Ambiente</option>
+                                        <option value="cultura">Cultura</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectDescription" class="form-label">Descrição Detalhada</label>
+                                    <textarea id="projectDescription" name="projectDescription" class="form-textarea" required style="min-height: 120px;"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectImpact" class="form-label">Indicadores de Impacto</label>
+                                    <textarea id="projectImpact" name="projectImpact" class="form-textarea" placeholder="Ex: Nº de alunos atendidos, taxa de evasão reduzida..." style="min-height: 120px;"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectMedia" class="form-label">Foto Principal</label>
+                                    <input type="file" id="projectMedia" name="projectMedia" accept="image/*" class="file-input">
+                                    <span class="text-sm" style="color: var(--color-neutral-medium); margin-top: 4px; display: block;">Deixe em branco se não quiser alterar a foto existente (durante a edição).</span>
+                                </div>
+                                <button type="submit" id="saveProjectButton" class="btn btn-primary" style="width: 100%; margin-top: var(--space-md);">Salvar Projeto</button>
+                                <button type="button" id="cancelEditButton" class="btn btn-neutral hidden" style="width: 100%; padding: var(--space-xs) var(--space-lg); margin-top: var(--space-xs);">Cancelar Edição</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="lg-col-8 space-y-6">
+                        <div class="p-md rounded-lg shadow-xl" style="background-color: var(--color-white);">
+                            <h2 class="font-bold mb-md">Projetos Ativos</h2>
+                            <div style="overflow-x: auto;">
+                                <table class="table-gestao">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="p-4 font-semibold">Foto</th>
+                                            <th class="p-4 font-semibold">Projeto</th>
+                                            <th class="p-4 font-semibold">Categoria</th>
+                                            <th class="p-4 font-semibold">Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="project-list" class="divide-y divide-gray-200">
+                                        <tr data-id="1" data-image="https://placehold.co/600x400/63b3ed/ffffff?text=Educação+Digital">
+                                            <td class="p-4"><img src="https://placehold.co/600x400/63b3ed/ffffff?text=Educação+Digital" alt="Educação Digital" class="h-10 w-16 object-cover rounded" style="height: 40px; width: 64px; object-fit: cover; border-radius: 4px;"></td>
+                                            <td class="p-4" data-field="name">Educação Digital para Todos</td>
+                                            <td class="p-4" data-field="category" data-category-value="educacao"><span class="badge badge-educacao">Educação</span></td>
+                                            <td class="p-4 space-x-2" style="display: flex; gap: var(--space-xs);">
+                                                <button class="edit-btn btn btn-neutral">Editar</button>
+                                                <button class="gallery-btn btn btn-neutral">Galeria</button>
+                                            </td>
+                                            <td class="hidden" data-field="description">Descrição do projeto de Educação Digital...</td>
+                                            <td class="hidden" data-field="impact">Indicadores do projeto de Educação Digital...</td>
+                                        </tr>
+                                        <tr data-id="2" data-image="https://placehold.co/600x400/48bb78/ffffff?text=Horta+Comunitária">
+                                            <td class="p-4"><img src="https://placehold.co/600x400/48bb78/ffffff?text=Horta+Comunitária" alt="Horta" class="h-10 w-16 object-cover rounded" style="height: 40px; width: 64px; object-fit: cover; border-radius: 4px;"></td>
+                                            <td class="p-4" data-field="name">Horta Comunitária Sustentável</td>
+                                            <td class="p-4" data-field="category" data-category-value="meio-ambiente"><span class="badge badge-meio-ambiente">Meio Ambiente</span></td>
+                                            <td class="p-4 space-x-2" style="display: flex; gap: var(--space-xs);">
+                                                <button class="edit-btn btn btn-neutral">Editar</button>
+                                                <button class="gallery-btn btn btn-neutral">Galeria</button>
+                                            </td>
+                                            <td class="hidden" data-field="description">Descrição do projeto de Horta Comunitária...</td>
+                                            <td class="hidden" data-field="impact">Indicadores do projeto de Horta...</td>
+                                        </tr>
+                                        <tr data-id="3" data-image="https://placehold.co/600x400/f6ad55/ffffff?text=Cultura+e+Arte">
+                                            <td class="p-4"><img src="https://placehold.co/600x400/f6ad55/ffffff?text=Cultura+e+Arte" alt="Arte" class="h-10 w-16 object-cover rounded" style="height: 40px; width: 64px; object-fit: cover; border-radius: 4px;"></td>
+                                            <td class="p-4" data-field="name">Arte e Cultura na Periferia</td>
+                                            <td class="p-4" data-field="category" data-category-value="cultura"><span class="badge badge-cultura">Cultura</span></td>
+                                            <td class="p-4 space-x-2" style="display: flex; gap: var(--space-xs);">
+                                                <button class="edit-btn btn btn-neutral">Editar</button>
+                                                <button class="gallery-btn btn btn-neutral">Galeria</button>
+                                            </td>
+                                            <td class="hidden" data-field="description">Descrição do projeto de Arte e Cultura...</td>
+                                            <td class="hidden" data-field="impact">Indicadores do projeto de Arte...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16" style="background-color: var(--color-neutral-darkest); color: var(--color-white); padding-top: var(--space-lg);">
+        <div class="container text-center">
+            <p>&copy; 2025 ONG Conecta Bem. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

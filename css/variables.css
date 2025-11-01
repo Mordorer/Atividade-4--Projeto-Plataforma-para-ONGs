@@ -1,0 +1,48 @@
+/* 1. SISTEMA DE DESIGN (VARIABLES) */
+
+/* 1.1. Paleta de Cores */
+:root {
+    --color-primary-dark: #047857;
+    --color-primary-hover: #0d9488;
+    --color-primary-base: #047857;
+    
+    --color-secondary-base: #facc15;
+    --color-secondary-hover: #eab308;
+
+    --color-neutral-darkest: #1f2937;
+    --color-neutral-dark: #4b5563;
+    --color-neutral-medium: #6b7280;
+    --color-neutral-light: #f9fafb;
+    --color-white: #ffffff;
+    --color-red-error: #ef4444;
+	--color-white: #ffffff;
+	--color-hero-background: #065f46;
+	--color-dark-mode-bg: #111111;
+    --color-dark-mode-text: #f0f0f0;
+    --color-dark-mode-card: #222222; 
+    --color-focus-outline: #2dd4bf; 
+}
+
+/* 1.2. Tipografia Hierárquica */
+:root {
+    --font-family-base: 'Inter', sans-serif;
+    
+    --font-size-base: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.5rem;
+}
+
+/* 1.3. Sistema de Espaçamento Modular */
+:root {
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
+    --space-3xl: 80px;
+}
